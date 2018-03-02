@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class InputBox extends Component {
     constructor(props) {
         super(props);
-        this.onChange = this.onChange.bind(this);
+        //this.onChange = this.onChange.bind(this);
         this.submitToDo = this.submitToDo.bind(this);
         this.state = { 
             text: ''
@@ -12,7 +12,7 @@ export default class InputBox extends Component {
 
     
 
-    onChange(e) {
+    onChange = e => {
         //console.log(e.currentTarget.value);
         //this.state.text = '';
         this.setState({

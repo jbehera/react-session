@@ -19,11 +19,15 @@ export default class ToDoList extends Component {
         }));
     }
 
+    showDetails = (url) => {
+        this.props.history.push(url);
+    }
+
     render() {
         return (
             <div>
                 <InputBox onAdd={this.onTaskAdd} />
-                <List tasks={this.state.tasks} />
+                <List tasks={this.state.tasks} onDetail={this.showDetails} />
             </div>
         )
     }
